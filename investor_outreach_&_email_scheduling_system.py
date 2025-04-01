@@ -13,14 +13,14 @@ import re
 # 🔹 SMTP Email Configuration
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-EMAIL_ADDRESS = "smitpatelh2006@gmail.com"
-EMAIL_PASSWORD = "hhik ijmg wjri icli"  # Use App Password
+EMAIL_ADDRESS = "EMAIL_ADDRESS"
+EMAIL_PASSWORD = "EMAIL_PASSWORD"  # Use App Password
 
 # 🔹 Configure IMAP (for reading replies)
 IMAP_SERVER = "imap.gmail.com"
 
 # 🔹 Initialize LangChain with Gemini Pro
-llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", google_api_key="AIzaSyCN0p7Pac2r5N4MPpRnilJEyAyFa0hrvjs")
+llm = ChatGoogleGenerativeAI(model="gemini-1.5-pro", google_api_key="GEMINI_API_KEY")
 
 # 🔹 Memory for tracking conversation history
 memory = ConversationBufferMemory(input_key="recipient", memory_key="history")
@@ -266,7 +266,7 @@ def get_email_status():
     for recipient, status in emails:
         print(f"📧 {recipient}: {status}")
 
-recipient_list = ["smitfaldu2006@gmail.com", "test456@gmail.com"]
+recipient_list = ["test123@gmail.com", "test456@gmail.com"]
 send_emails(recipient_list)
 
 # 🔹 Check for Replies & Ask Before Sending Auto-Replies
